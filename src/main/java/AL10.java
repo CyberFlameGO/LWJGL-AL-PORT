@@ -72,4 +72,40 @@ public class AL10 {
     public static void sourceStop(int source){
         org.lwjgl.openal.AL10.alSourceStop(source);
     }
+
+    public static int getAlNoError() {
+        return AL_NO_ERROR;
+    }
+
+    public static int getAlBuffer() {
+        return AL_BUFFER;
+    }
+
+    public static int getAlSourceState() {
+        return AL_SOURCE_STATE;
+    }
+
+    public static int getAlPlaying() {
+        return AL_PLAYING;
+    }
+
+    public static int getAlLooping() {
+        return AL_LOOPING;
+    }
+
+    public static int getAlTrue() {
+        return AL_TRUE;
+    }
+
+    public static int getAlReferenceDistance() {
+        return AL_REFERENCE_DISTANCE;
+    }
+
+    public static int getAlRolloffFactor() {
+        return AL_ROLLOFF_FACTOR;
+    }
+
+    public static int getAlPosition() {
+        return AL_POSITION;
+    }
 }
