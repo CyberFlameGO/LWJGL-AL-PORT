@@ -1,3 +1,4 @@
+import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 
 /***
@@ -22,5 +23,53 @@ public class AL10 {
 
     public static void genSources(IntBuffer buffer){
         org.lwjgl.openal.AL10.alGenSources(buffer);
+    }
+
+    public static void bufferData(int buffer, int format, ByteBuffer data, int frequency){
+        org.lwjgl.openal.AL10.alBufferData(buffer, format, data, frequency);
+    }
+
+    public static void sourceI(int source, int name, int value){
+        org.lwjgl.openal.AL10.alSourcei(source, name, value);
+    }
+
+    public static int getSourceI(int source, int name){
+        return org.lwjgl.openal.AL10.alGetSourcei(source, name);
+    }
+
+    public static String getString(int name){
+        return org.lwjgl.openal.AL10.alGetString(name);
+    }
+
+    public static int getError(){
+        return org.lwjgl.openal.AL10.alGetError();
+    }
+
+    public static void sourceF(int source, int name, float value){
+        org.lwjgl.openal.AL10.alSourcef(source, name, value);
+    }
+
+    public static void sourcePlay(int source){
+        org.lwjgl.openal.AL10.alSourcePlay(source);
+    }
+
+    public static void sourceStop(IntBuffer sources){
+        org.lwjgl.openal.AL10.alSourceStopv(sources);
+    }
+
+    public static void deleteSources(IntBuffer sources){
+        org.lwjgl.openal.AL10.alDeleteSources(sources);
+    }
+
+    public static void listen3f(int name, float v1, float v2, float v3){
+        org.lwjgl.openal.AL10.alListener3f(name, v1, v2, v3);
+    }
+
+    public static void source3f(int source, int name, float v1, float v2, float v3){
+        org.lwjgl.openal.AL10.alSource3f(source, name, v1, v2, v3);
+    }
+
+    public static void sourceStop(int source){
+        org.lwjgl.openal.AL10.alSourceStop(source);
     }
 }
