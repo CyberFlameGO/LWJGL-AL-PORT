@@ -13,5 +13,4 @@ public class ALC10 {
     public static final int ALC_DEFAULT_DEVICE_SPECIFIER = org.lwjgl.openal.ALC10.ALC_DEFAULT_DEVICE_SPECIFIER;
     public static final int ALC_DEVICE_SPECIFIER = org.lwjgl.openal.ALC10.ALC_DEVICE_SPECIFIER;
 
-
 }
